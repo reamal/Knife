@@ -53,4 +53,5 @@ app->build->intermediates->classes->debug->com->bravo->knife->MainActivity$$View
   
   然后 sync now  同步一下，让gradle去下载相关的配置文件。
   
- * 主要的生成代码写在inject-compiler项目中的BindViewProcessor文件中。编译时注解的奥妙都在这个里面了。
+ * 主要的生成代码写在inject-compiler项目中的BindViewProcessor文件中。编译时注解的奥妙都在这个里面了。androidStudio在编译项目时，会运行继承了AbstractProcessor的BindViewProcessor类，不过需要注意的是要在类上面加注解@AutoService(Processor.class)，我开始就是没有加注解，找了好久的问题。
+ 
